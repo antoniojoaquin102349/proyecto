@@ -1,18 +1,44 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="list-wrapper">
+    <ul v-if="grupos !== null" class="d-flex flex-column-reverse todo-list">
+      <grupo-list-item
+        v-for="grupo in grupos"
+        :key="grupo['.key']"
+        :grupo="grupo"
+      />
+    </ul>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { GruposRef, Auth } from "@/modules/firebase";
+import GrupoListItem from "@/components/GrupoListItem";
 
 export default {
-  name: 'Home',
+  name: "HomePage",
   components: {
-    HelloWorld
-  }
-}
+    GrupoListItem,
+  },
+  computed: {
+    hasSession() {
+      return Auth.currentUser !== null;
+    },
+  },
+  data() {
+    console.log(GruposRef.orderBy("tittle", "desc"));
+    return {
+      grupos: GruposRef.doc(),
+    };
+  },
+
+  methods: {
+    firestore() {
+      return {
+        grupos: GruposRef.orderBy("completed", "desc"),
+      };
+    },
+  },
+};
 </script>
+<style>
+</style>

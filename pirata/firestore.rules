@@ -1,0 +1,13 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /Tareas/{document=**} {
+      allow read: 
+    }
+
+    match /tasks/{document=**} {
+      allow read, write: if
+          request.auth.uid !=null;
+    }
+  }
+}
