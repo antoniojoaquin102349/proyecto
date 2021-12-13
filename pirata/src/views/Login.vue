@@ -63,7 +63,7 @@ export default {
         return;
       }
 
-      //llamar a firebase auth método login
+     
       try{
           const response = await Auth.signInWithEmailAndPassword(this.user.username,this.user.password)
 
