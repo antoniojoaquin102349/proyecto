@@ -1,12 +1,11 @@
 <template>
-  <li :class="{ completed: grupo.completed === true }">
-    <div class="form-check">
-      <label class="form-check-label">
-        <input class="checkbox" v-model="checked" type="checkbox" />
-        {{ grupo.title }} <i class="input-helper"></i
-      ></label>
-    </div>
-  </li>
+   
+   <div class="form-check">
+     <h1>chavi no me jodas</h1>
+     <label class="form-check-label">
+     {{ grupo.ti }} <i class="input-helper"></i
+     ></label>
+    </div> 
 </template>
 
 <script>
@@ -21,16 +20,5 @@ export default {
   mounted() {
     console.info(this.grupo);
   },
-  methods: {
-    
-  },
-  mounted(){
-    this.checked = this.grupo.completed
-  },
-  watch: {
-    checked(newValue) {
-      this.$emit('toggleComplete', {id: this.grupo['.key'], completed: newValue})
-    }
-  }
 };
 </script>

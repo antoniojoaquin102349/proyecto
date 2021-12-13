@@ -22,13 +22,10 @@ export default {
   },
   mounted() {
     Auth.onAuthStateChanged((user) => {
-      console.info("cambio de estado de sesión", user)
-      console.log(this.hasSession)
       this.hasSession = (user !== null)
 
       if(this.hasSession && this.$route.name === 'login' ||
-      this.$route.name === 'register' ||
-      this.$route.name === 'reset_password'){
+      this.$route.name === 'register'){
         try{
           this.$router.replace({name: 'home'})
         }catch(e){
