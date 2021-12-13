@@ -27,7 +27,7 @@ export default {
       if(this.hasSession && this.$route.name === 'login' ||
       this.$route.name === 'register'){
         try{
-          this.$router.replace({name: 'home'})
+          
         }catch(e){
           console.error(e.message)
         }

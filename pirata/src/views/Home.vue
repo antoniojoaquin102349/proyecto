@@ -21,22 +21,18 @@ export default {
   },
   computed: {
     hasSession() {
-      return Auth.currentUser !== null;
+      return true //Auth.currentUser !== null;
     },
   },
-  data() {
-    console.log(GruposRef.orderBy("tittle", "desc"));
+  data(){
     return {
-      grupos: GruposRef.doc(),
-    };
+      grupos: []
+    }
   },
-
-  methods: {
-    firestore() {
-      return {
-        grupos: GruposRef.orderBy("completed", "desc"),
-      };
-    },
+  firestore() {
+    return {
+        grupos: GruposRef.orderBy("tipo", "desc"),
+    };
   },
 };
 </script>

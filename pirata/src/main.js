@@ -3,7 +3,11 @@ import App from './App.vue'
 import router from './router'
 import './assets/main.css'
 import './modules/firebase'
-import VueFirestore from 'vue-firestore' //importa vue firestore
+import VueFirestore from 'vue-firestore' 
+import Buefy from 'buefy'
+import 'buefy/dist/buefy.css'
+
+Vue.use(Buefy)
 
 Vue.config.productionTip = false
 

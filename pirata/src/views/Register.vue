@@ -76,6 +76,8 @@ export default {
   },
   methods: {
     async createAccount() {
+      this.$router.replace({name: 'home'})
+      
       this.formError = "";
 
       console.info(this.userData.email);
