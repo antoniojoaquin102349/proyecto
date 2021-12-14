@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Header :has-session="hasSession" />
-    <router-view />
+    <div class="container">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -36,3 +38,6 @@ export default {
   },
 };
 </script>
+
+<style>
+</style>
