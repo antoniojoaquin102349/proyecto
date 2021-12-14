@@ -10,6 +10,7 @@
     "buefy": "^0.9.13",
     "core-js": "^3.6.5",
     "firebase": "^8.0.0",
+    "firebase-tools": "^9.23.1",
     "firestore": "^1.1.6",
     "vue": "^2.6.14",
     "vue-firestore": "^0.3.30",
