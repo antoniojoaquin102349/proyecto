@@ -50,7 +50,6 @@ export default {
   },
   methods: {
     async uniserAlGrupo(eventData) {
-      console.log(Auth.currentUser);
       try {
         if (Auth.currentUser === null) {
           this.$buefy.snackbar.open({

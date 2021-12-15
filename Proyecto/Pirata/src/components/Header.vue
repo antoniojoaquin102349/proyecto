@@ -101,7 +101,7 @@ export default {
 
 <style>
   .navbar {
-    background-color: green;
+    background-color: rgb(2, 24, 2);
   }
   .separarse{
     margin-right: 10px;
