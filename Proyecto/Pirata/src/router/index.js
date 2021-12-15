@@ -9,8 +9,9 @@ import CrearGrupo from '../views/CrearGrupo.vue'
 Vue.use(VueRouter)
 
 const routes = [
+ 
   {
-    path: '/home',
+    path: '/',
     name: 'home',
     component: Home
   },

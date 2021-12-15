@@ -12,12 +12,6 @@
       <b-button class="boton" type="is-primary"  @click.prevent="resetPassword">Solicitar cambio</b-button>
        <b-button type="is-danger" @click="gotToRegisterPage">Volver</b-button>
     </section>
-
-    <!-- <form class="mt-5">
-      <div class="my-3 alert alert-danger" v-if="formError !== ''">
-        {{ formError }}
-      </div>
-    </form> -->
   </div>
 </template>
 
@@ -63,5 +57,8 @@ export default {
 }
 .center {
   padding: 20px 250px;
+}
+.container{
+  background-color: cornsilk;
 }
 </style>

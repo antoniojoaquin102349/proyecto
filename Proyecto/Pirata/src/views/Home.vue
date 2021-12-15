@@ -82,8 +82,9 @@ export default {
         console.error(e);
       }
     },
-    filtrar(value) {
-      this.grupos = this.grupos.filter((grupo) => grupo.tipo === value);
+      filtrar(value) {
+      this.grupos = this.todos.filter((grupo) => grupo.tipo === value);
+
     }
   },
   computed: {
@@ -94,11 +95,13 @@ export default {
   data() {
     return {
       grupos: [],
+      todos:[],
     };
   },
   firestore() {
     return {
       grupos: GruposRef.where("completed", "==", false),
+      todos: GruposRef.where("completed", "==", false),
     };
   },
 };
@@ -120,5 +123,8 @@ export default {
 .separarse {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.container{
+  background-color: cornsilk;
 }
 </style>

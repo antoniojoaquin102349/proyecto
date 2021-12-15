@@ -4,7 +4,7 @@
       <h1 id="color" class="title separarse">Pirata</h1>
     </template>
     <template #start>
-      <a class="button is-primary separarse pabajo" href="/home">
+      <a class="button is-primary separarse pabajo" href="/">
             <strong>Home</strong>
       </a>
       <a class="button is-primary separarse pabajo" href="/crear-grupo" v-if="hasSession">

@@ -33,7 +33,7 @@
           placeholder="0"
           expanded
           v-model="grupoPrecio"
-        ></b-input>
+          ></b-input>
       </b-field>
 
       <b-field label="Sitios">

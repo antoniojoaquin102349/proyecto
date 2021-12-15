@@ -18,13 +18,13 @@
           <li>
             <strong>{{ grupo.title }}</strong>
           </li>
-          <li><strong>Precio</strong>: {{ grupo.precio }}</li>
+          <li><strong>Precio</strong>: {{ grupo.precio }}€</li>
           <li><strong>Sitios disponibles</strong>: {{ grupo.usuarios.length }}/{{ grupo.sitios }}</li>
         </ul>
       </div>
     </div>
     <footer class="card-footer">
-      <b-button focused class="card-footer-item"
+      <b-button type="is-primary" focused class="card-footer-item"
         @click.prevent="unirse">Unirse</b-button>
     </footer>
   </div>
@@ -38,9 +38,6 @@ export default {
     return {
       checked: false,
     };
-  },
-  mounted() {
-    // console.info(this.grupo);
   },
   methods: {
     unirse() {
@@ -68,5 +65,8 @@ export default {
 }
 .texto {
   color: white !important;
+}
+.content{
+  background-color: rgb(233, 193, 141);
 }
 </style>

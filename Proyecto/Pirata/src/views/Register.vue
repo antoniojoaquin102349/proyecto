@@ -136,4 +136,7 @@ export default {
 .center {
   padding: 20px 250px;
 }
+.container{
+  background-color: cornsilk;
+}
 </style>
